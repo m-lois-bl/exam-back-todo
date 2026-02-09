@@ -16,7 +16,7 @@ class CategorySerializer(serializers.ModelSerializer):
     
     def validate_name(self, value):
         """
-        Vérifie que le nom de la catégorie fait plus de trois caractères et est bien unique (insensibilité à la casse)
+        Vérifie que le nom de la catégorie fait plus de trois caractères et est bien unique (insensibilité à la casse).
         """
         if len(value.strip()) < 3 :
             raise serializers.ValidationError("Le nom de la catégorie doit comporter au moins trois caractères.")
